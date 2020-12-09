@@ -5,7 +5,24 @@ import os, shelve
 
 dayNames = {'1':'Monus','2':'Dicus','3':'Tricus','4':'Quarus','5':'Pentus','6':'Hexus','7':'Septus','8':'Octus','9':'Nonus','10':'Decus'}
 weekNames = {'1':'Unum','2':'Dosum','3':'Trisum'}
-monthNames = {'1':'Primet','2':'Secet','3':'Teret','4':'Quaret','5':'Quinet','6':'Hexet','7':'Septet','8':'Octet','9':'Nonet','10':'Decet','11':'Undecet','12':'Dudecet'}
+monthNames = {
+    # Autumn
+    '1': 'Vendémiaire',
+    '2': 'Brumaire',
+    '3': 'Frimaire',
+    # Winter
+    '4': 'Nivôse',
+    '5': 'Pluviôse',
+    '6': 'Ventôse',
+    # Spring
+    '7': 'Germinal',
+    '8': 'Floréal',
+    '9': 'Prairial',
+    # Summer
+    '10': 'Messidor',
+    '12': 'Thermidor',
+    '13': 'Fructidor',
+}
 
 dayNumbers = {v:k for k, v in dayNames.items()}
 weekNumbers = {v:k for k,v in weekNames.items()}
