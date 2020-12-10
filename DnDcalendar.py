@@ -20,8 +20,8 @@ monthNames = {
     '9': 'Prairial',
     # Summer
     '10': 'Messidor',
-    '12': 'Thermidor',
-    '13': 'Fructidor',
+    '11': 'Thermidor',
+    '12': 'Fructidor',
 }
 
 dayNumbers = {v:k for k, v in dayNames.items()}
