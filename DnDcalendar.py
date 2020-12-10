@@ -1,7 +1,7 @@
 #! python3
 #DnDcalendarSystem.py - Maintains a calendar showing the date for a 360 day year, divided into twelve 3 week months
 
-import os, shelve
+import os, time
 
 dayNames = {'1':'Monus','2':'Dicus','3':'Tricus','4':'Quarus','5':'Pentus','6':'Hexus','7':'Septus','8':'Octus','9':'Nonus','10':'Decus'}
 weekNames = {'1':'Unum','2':'Dosum','3':'Trisum'}
@@ -136,29 +136,24 @@ while True:
             changeThedate.flush()
             changeThedate.close()
 
-        currentDayNumber = dayNumbers.get(currentDay, 0)
-        currentWeekNumber = weekNumbers.get(currentWeek, 0)
-        currentMonthNumber = monthNumbers.get(currentMonth, 0)  
-        currentDatename = ('The current date is ' + ' ' + currentDay + ' ' + currentWeek + ' ' + currentMonth + ' ' + currentYear)
-        currentDatenumber = (str(currentDayNumber) + '/' + str(currentWeekNumber) + '/' + str(currentMonthNumber) + '/' + str(currentYear))    
-        print(currentDatename)
-        print(currentDatenumber)
 
         nextDayNumber = dayNumbers.get(nextDay, 0)
         nextWeekNumber = weekNumbers.get(nextWeek, 0)
         nextMonthNumber = monthNumbers.get(nextMonth, 0)
-        nextDatename = ('Tomorrow will be ' + ' ' + nextDay + ' ' + nextWeek + ' ' + nextMonth + ' ' + str(nextYear))
+        nextDatename = ('It is now' + ' ' + nextDay + ' ' + nextWeek + ' ' + nextMonth + ' ' + str(nextYear))
         nextDatenumber = (str(nextDayNumber) + '/' + str(nextWeekNumber) + '/' + str(nextMonthNumber) + '/' + str(nextYear))
         print(nextDatename)
         print(nextDatenumber)
     else:
+        print('Goodbye Gamemaster, see you next session!')
+        time.sleep(3)
         break
     
 
     
-#To make it cleaner: Do a reverse dictionary (Done)
+#TODO: Do a reverse dictionary (Done)
 #TODO: Have program display current date in number and name format (Done)
-#TODO: Have program provide an input option for number of days to increase/decrease by
 #TODO: Have program save date to an outside file for reopening later (Done)
-#TODO: Provide input to automatically move to next day, or put in a new day
+#TODO: Provide input to automatically move to next day (Done)
+#TODO: Have program provide an input option for number of days to increase/decrease by
 #TODO: Connect with weather
