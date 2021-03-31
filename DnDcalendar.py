@@ -112,7 +112,7 @@ currentWeekNumber = weekNumbers.get(currentWeek, 0)
 currentMonthNumber = monthNumbers.get(currentMonth, 0)  
 currentDatename = ('The current date is ' + ' ' + currentDay + ' ' + currentWeek + ' ' + currentMonth + ' ' + currentYear)
 currentDatenumber = (str(currentDayNumber) + '/' + str(currentWeekNumber) + '/' + str(currentMonthNumber) + '/' + str(currentYear))    
-print(currentDatename)
+print(currentDatename)       
 print(currentDatenumber)
 
 #Allowing User to advance the date
